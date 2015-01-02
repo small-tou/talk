@@ -4,7 +4,6 @@
 #talk-list {
     box-sizing: border-box;
     width: 745px;
-    height: 469px;
     border: 1px solid #DEDEDE;
 }
 #talk-list .contact-list {

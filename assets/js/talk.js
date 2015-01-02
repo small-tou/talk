@@ -60,7 +60,6 @@ var SocketController = function(){
             socket = io.connect('/?id=' + config.id + '&nick=' + config.nick, {port: 6767});
             socket.on('connected', function (data) {
                 console.log("connected");
-                socket.emit('get-uuid', {id: "dd"});
                 $(".status").html("连接成功，等待用户发起聊天")
             });
             socket.on("login_anywhere",function(){
@@ -77,7 +76,7 @@ var SocketController = function(){
                 $(".status").html("连接失败")
             })
             socket.socket.on("connect", function (data) {
-                $(".status").html("正在与客服建立连接")
+                $(".status").html("正在与服务器建立连接")
             })
         },
         sendMessage: function (msg) {

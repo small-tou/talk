@@ -47,7 +47,7 @@ io.sockets.on('connection', function (socket) {
     })
     var user = socket.handshake.user
     if(onlines[user.id]){
-        io.sockets.sockets[seller_id].emit('login_anywhere',{})
+        io.sockets.sockets[onlines[user.id].client_id].emit('login_anywhere',{})
     }
     onlines[user.id] = {
         user_id:user.id,

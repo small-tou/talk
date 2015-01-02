@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>实时讨论</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/admin.css" type="text/css">
+    <script src="http://htmljs.b0.upaiyun.com//js/jquery.js"></script>
+    <base target="_blank">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style>
+        #talk-list{
+            width:100%;
+            height:auto;
+            background: #F7F7F7;
+        }
+        #talk-list .talk-box{
+            width:100%;
+
+        }
+        #talk-list .talk-box .talk-wrap{
+            height:100%;
+            background: none;
+
+        }
+        #talk-list .talk-box .talk-wrap .talk-histary{
+            padding-bottom: 50px;
+            padding-top:30px;
+        }
+        #talk-list .talk-box .talking{
+            position: fixed;
+            bottom:0;
+            left:0;
+            width:100%;
+            background: #fff;
+            padding:10px;
+        }
+        #talk-list .talk-box .talking input{
+            width:75%;
+        }
+        #talk-list .talk-box .talking button{
+            width:20%;
+        }
+        .status{
+            line-height: 30px;
+        font-size:14px;
+            text-align: center;
+        width:100%;
+            color:#aaaaaa;
+            position: fixed;
+            top:0;
+            left:0;
+            background: #fff;
+        }
+    </style>
+</head>
+<body id="talk-list">
+<div class="talk-box">
+    <div class="status">正在连接客服</div>
+    <div class="talk-wrap">
+        <ul class="talk-histary">
+
+        </ul>
+    </div>
+    <form class="talking" id="talk_form">
+        <input type="text" id="talking-text" placeholder="输入聊天内容"/>
+        <button id="talking-sub">发送</button>
+    </form>
+</div>
+<script src="/assets/js/db.js"></script>
+<script src="/assets/js/moment.js"></script>
+<script src="/assets/socket.io/socket.io.js"></script>
+<script>
+    var user_id = 0;
+    $.getScript("/assets/js/talk-client.js?dd",function(){})
+
+</script>
+</body>
+</html>

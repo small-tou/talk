@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+}
+#talk-list {
+    box-sizing: border-box;
+    width: 745px;
+    height: 469px;
+    border: 1px solid #DEDEDE;
+}
+#talk-list .contact-list {
+    float: left;
+    width: 180px;
+    height: 469px;
+    border-right: 1px solid #DEDEDE;
+}
+#talk-list .contact-list .title {
+    color: #333;
+    font-size: 14px;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+#talk-list .contact-list .contacts li {
+    height: 38px;
+    cursor: pointer;
+    padding: 0 10px;
+}
+#talk-list .contact-list .contacts li span {
+    display: block;
+    float: left;
+    color: #666;
+    line-height: 38px;
+}
+#talk-list .contact-list .contacts li i {
+    display: block;
+    float: right;
+    background: #FF5517;
+    color: #fff;
+    border-radius: 12px;
+    padding: 0 4px;
+    font-style: normal;
+    margin-top: 12px;
+}
+#talk-list .contact-list .contacts li:hover,
+#talk-list .contact-list .contacts li.active {
+    background: #F7F7F7;
+}
+#talk-list .contact-list .contacts li:hover span,
+#talk-list .contact-list .contacts li.active span {
+    color: #FF5517;
+}
+#talk-list .talk-box {
+    float: left;
+    width: 563px;
+    height: 469px;
+}
+#talk-list .talk-box .talk-wrap {
+    background: #F7F7F7;
+    overflow-y: scroll;
+    height: 409px;
+}
+#talk-list .talk-box .talk-wrap .talk-histary {
+    padding: 0px 20px;
+}
+#talk-list .talk-box .talk-wrap .talk-histary li {
+    margin-bottom: 20px;
+}
+#talk-list .talk-box .talk-wrap .talk-histary li .time {
+    text-align: center;
+    font-size: 12px;
+    color: #CCCCCC;
+    margin-bottom: 8px;
+}
+#talk-list .talk-box .talk-wrap .talk-histary li .figure {
+    color: #999;
+}
+#talk-list .talk-box .talk-wrap .talk-histary li .talk-content {
+    position: relative;
+}
+#talk-list .talk-box .talk-wrap .talk-histary li .talk-content .cont-arrow {
+    display: block;
+    position: absolute;
+}
+#talk-list .talk-box .talk-wrap .talk-histary li .talk-content p {
+    font-size: 14px;
+    color: #333;
+}
+#talk-list .talk-box .talk-wrap .talk-histary li .talk-content a {
+    color: #007AD8;
+    font-size: 14px;
+}
+#talk-list .talk-box .talk-wrap .talk-histary li .talk-content .car-box {
+    width: 350px;
+    height: 122px;
+    border: 1px solid #E7E7E7;
+    background: #fff;
+    padding: 10px;
+    margin-top: 10px;
+}
+#talk-list .talk-box .talk-wrap .talk-histary li .talk-content .car-box .car-img {
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+#talk-list .talk-box .talk-wrap .talk-histary li .talk-content .car-box .car-img img {
+    width: 150px;
+    height: 100px;
+}
+#talk-list .talk-box .talk-wrap .talk-histary li .talk-content .car-box .car-info {
+    width: 165px;
+    float: left;
+}
+#talk-list .talk-box .talk-wrap .talk-histary li .talk-content .car-box .car-info span {
+    font-size: 12px;
+    color: #999;
+}
+#talk-list .talk-box .talk-wrap .talk-histary li .talk-content .car-box .car-info em {
+    color: #FF5517;
+    font-weight: bold;
+}
+#talk-list .talk-box .talk-wrap .talk-histary li .talk-content .car-box .car-info .car-title {
+    height: 40px;
+    margin-bottom: 3px;
+}
+#talk-list .talk-box .talk-wrap .talk-histary li .talk-content .car-box .car-info .car-title a {
+    font-size: 14px;
+    color: #333;
+}
+#talk-list .talk-box .talk-wrap .talk-histary li .talk-content .car-box .car-info .car-title a:hover {
+    color: #FF5517;
+}
+#talk-list .talk-box .talk-wrap .talk-histary li .talk-content .car-box .car-info .car-price {
+    margin-bottom: 3px;
+}
+#talk-list .talk-box .talk-wrap .talk-histary li .talk-content .car-box .car-info .car-time {
+    margin-bottom: 3px;
+}
+#talk-list .talk-box .talk-wrap .talk-histary .my-cont .figure {
+    text-align: right;
+}
+#talk-list .talk-box .talk-wrap .talk-histary .my-cont .talk-content {
+    margin-top: 10px;
+    float: right;
+    background: #C4E285;
+    border: 1px solid #85B129;
+    padding: 8px;
+    border-radius: 3px;
+}
+#talk-list .talk-box .talk-wrap .talk-histary .my-cont .talk-content .cont-arrow {
+    width: 10px;
+    height: 6px;
+    background: url(../images/common/talk-arrow-g.png) no-repeat;
+    top: -6px;
+    right: 10px;
+}
+#talk-list .talk-box .talk-wrap .talk-histary .shop-cont .figure {
+    text-align: left;
+}
+#talk-list .talk-box .talk-wrap .talk-histary .shop-cont .talk-content {
+    margin-top: 10px;
+    float: left;
+    background: #fff;
+    border: 1px solid #E7E7E7;
+    padding: 8px;
+    border-radius: 3px;
+}
+#talk-list .talk-box .talk-wrap .talk-histary .shop-cont .talk-content .cont-arrow {
+    width: 12px;
+    height: 6px;
+    background: url(../images/common/talk-arrow-w.png) no-repeat;
+    top: -6px;
+    left: 10px;
+}
+#talk-list .talk-box .talking {
+    border-top: 1px solid #DEDEDE;
+    padding-left: 20px;
+    padding-top: 17px;
+}
+#talk-list .talk-box .talking input {
+    border: 1px solid #DEDEDE;
+    color: #333;
+    width: 420px;
+    height: 30px;
+    margin-right: 10px;
+    padding-left: 10px;
+}
+#talk-list .talk-box .talking button {
+    width: 90px;
+    height: 30px;
+    background: #FF5517;
+    color: #fff;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 30px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}

@@ -63,6 +63,9 @@ var SocketController = function(){
                 socket.emit('get-uuid', {id: "dd"});
 
             });
+            socket.on("login_anywhere",function(){
+                alert("账号在别处登录，自动退出。")
+            })
             socket.on("new-message", function (data) {
                 console.log(data)
                 setTimeout(function () {

@@ -22,8 +22,6 @@ var onlines = {
 io.sockets.on('connection', function (socket) {
     socket.on('new-message', function (data) {
         var user = socket.handshake.user
-        console.log("new message");
-        console.log(data)
         if(user.to&&onlines[user.to]){
             var seller_id = onlines[user.to].client_id
             io.sockets.sockets[seller_id].emit('new-message',{content:data.content,from:user.id,from_nick:user.nick});
@@ -48,6 +46,9 @@ io.sockets.on('connection', function (socket) {
         socket.broadcast.emit('offline',user);
     })
     var user = socket.handshake.user
+    if(onlines[user.id]){
+        io.sockets.sockets[seller_id].emit('login_anywhere',{})
+    }
     onlines[user.id] = {
         user_id:user.id,
         user_nick:user.nick,

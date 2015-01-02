@@ -57,7 +57,7 @@ var SocketController = function(){
     var socket;
     return {
         init: function (config) {
-            socket = io.connect('http://localhost?id=' + config.id + '&nick=' + config.nick, {port: 6767});
+            socket = io.connect('/?id=' + config.id + '&nick=' + config.nick, {port: 6767});
             socket.on('connected', function (data) {
                 console.log("connected");
                 socket.emit('get-uuid', {id: "dd"});

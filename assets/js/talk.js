@@ -61,7 +61,7 @@ var SocketController = function(){
             socket.on('connected', function (data) {
                 console.log("connected");
                 socket.emit('get-uuid', {id: "dd"});
-
+                $(".status").html("连接成功，等待用户发起聊天")
             });
             socket.on("login_anywhere",function(){
                 alert("账号在别处登录，自动退出。")

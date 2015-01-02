@@ -33,15 +33,6 @@ io.sockets.on('connection', function (socket) {
     });
     socket.on("disconnect",function(){
         var user = socket.handshake.user
-//        var talk = {
-//            user_id:0,
-//            user_nick:"系统消息",
-//            user_headpic:"",
-//            md:user.nick+" 离开了聊天",
-//            html:"<a href=/user/"+user.id+">"+user.nick+"</a> 离开了聊天",
-//            time:moment().format("MM-DD hh:mm"),
-//            client_id:socket.id
-//        }
         delete onlines[user.id]
         socket.broadcast.emit('offline',user);
     })

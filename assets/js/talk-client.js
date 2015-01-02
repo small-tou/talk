@@ -4,7 +4,7 @@ var SocketController = function(){
     var socket;
     return {
         init: function (config) {
-            socket = io.connect('http://localhost?id=' + config.id + '&nick=' + config.nick+'&to='+config.to, {port: 6767});
+            socket = io.connect('/?id=' + config.id + '&nick=' + config.nick+'&to='+config.to, {port: 6767});
             socket.on('connected', function (data) {
                 $(".status").html("已经建立连接，开始聊天吧")
             });

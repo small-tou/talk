@@ -45,12 +45,14 @@ io.sockets.on('connection', function (socket) {
         user_nick:user.nick,
         client_id:socket.id
     }
+    socket.emit("connected",onlines[user.id])
     if(user.to&&onlines[user.to]){
         socket.emit("connect_to_seller",{
             id:onlines[user.to].user_id,
             nick:onlines[user.to].user_nick
         })
     }
+
 });
 io.configure(function (){
     io.set('authorization', function (handshakeData, callback) {
